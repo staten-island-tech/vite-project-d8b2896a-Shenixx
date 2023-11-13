@@ -6,7 +6,7 @@ const agents = [
     },
     {
         name: "",
-        role: "",
+        role: "Duelist",
         description: "",
     },
     {

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Mukta:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.card {
+    font-family: Mukta;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 23%;
+    height: 35%;
+    background-color: rgba(0, 0, 0, 0.69);
+    border: 1px solid rgb(255, 0, 0);
+    margin: 1.5% auto;
+    justify-content: space-around;
+    align-items: center;
+  }
