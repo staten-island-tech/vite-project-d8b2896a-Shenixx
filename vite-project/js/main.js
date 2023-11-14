@@ -2,16 +2,13 @@ import '../css/style.css';
 import './agents';
 import './dom'
 import {agents} from "./agents";
-
-const DOMSelectors = {
-    box: document.getElementById("app"),
-};  
+import {DOMSelectors} from "./dom";
 
 function getData(){
-    const duelists = agents.filter((agent)=> agent.role === "Duelist").forEach((agent) => console.log(agent));
-    const controllers = agents.filter((agent)=> agent.role === "Controller").forEach((agent) => console.log(agent));
-    const initiators = agents.filter((agent)=> agent.role === "Initiator").forEach((agent) => console.log(agent));
-    const sentinels = agents.filter((agent)=> agent.role === "Sentinel").forEach((agent) => console.log(agent));
+    const duelists = agents.filter((agent)=> agent.role === "Duelist")
+    const controllers = agents.filter((agent)=> agent.role === "Controller")
+    const initiators = agents.filter((agent)=> agent.role === "Initiator")
+    const sentinels = agents.filter((agent)=> agent.role === "Sentinel")
     return {
         duelists: duelists,
         controllers: controllers,
@@ -21,11 +18,16 @@ function getData(){
 }
 
 function makeCard() {
-    const data = getData();
-    DOMSelectors.box.insertAdjacentHTML("afterend", `<div id="card"> <h2> My name is ${data.duelists.forEach((duelist) => console.log(duelist))} </div>`);
+    const data = getData(duelists);
+    data.duelists.forEach((duelist) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div id="card"> <h2 class = "card">${duelist.name} ${duelist.description}</h2> </div>`));
 }
 
-getData();
+makeCard();
 
-// const letMePass = cards.filter((card)=> card.rarity === "Common").forEach((common) => console.log(common));
-// const dontFail = cards.filter((card)=> card.printings.includes("5ED")).forEach((printing) => console.log(printing));
+
+// function makeCard(x) {
+//     const data = getData(x);
+//     data.duelists.forEach((duelist) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div id="card"> <h2 class = "card">${duelist.name} ${duelist.description}</h2> </div>`));
+// }
+
+// makeCard(duelists);
