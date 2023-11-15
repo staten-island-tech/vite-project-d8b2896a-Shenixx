@@ -17,17 +17,26 @@ function getData(){
     }
 }
 
-function makeCard() {
-    const data = getData(duelists);
-    data.duelists.forEach((duelist) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div id="card"> <h2 class = "card">${duelist.name} ${duelist.description}</h2> </div>`));
-}
+const data = getData();
 
-makeCard();
+function makeCardD(duelists) {
+    data.duelists.forEach((duelist) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div class="container">
+    <div class="card"> <h2 class = "">${duelist.name}</h2> <h3 class = "">${duelist.description}</h3> </div> </div>`));
+};
 
+function makeCardC(controllers) {
+    data.controllers.forEach((controller) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div class="container">
+    <div class="card"> <h2 class = "">${controller.name}</h2> <h3 class = "">${controller.description}</h3> </div></div>`));
+};
 
-// function makeCard(x) {
-//     const data = getData(x);
-//     data.duelists.forEach((duelist) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div id="card"> <h2 class = "card">${duelist.name} ${duelist.description}</h2> </div>`));
-// }
+function makeCardI(initiators) {
+    data.initiators.forEach((initiator) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div class="container">
+    <div class="card"> <h2 class = "">${initiator.name}</h2> <h3 class = "">${initiator.description}</h3> </div></div>`));
+};
 
-// makeCard(duelists);
+function makeCardS(sentinels) {
+    data.sentinels.forEach((sentinel) => DOMSelectors.box.insertAdjacentHTML("afterend", `<div class="container">
+    <div class="card"> <h2 class = "">${sentinel.name}</h2> <h3 class = "">${sentinel.description}</h3> </div></div>`));
+};
+
+makeCardC(data);
