@@ -46,18 +46,18 @@ const agents = [
     },
     {
         name: "Breach",
-        role: "",
+        role: "Initiator",
         description: "",
     },
     {
-        name: "",
-        role: "",
-        description: "",
+        name: "Skye",
+        role: "Initiator",
+        description: "Hailing from Australia, Skye and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others.",
     },
     {
-        name: "",
-        role: "",
-        description: "",
+        name: "Astra",
+        role: "Controller",
+        description: "Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields to her whim and a talent for deep strategic foresight, she's always eons ahead of her enemy's next move.        ",
     },
     {
         name: "",

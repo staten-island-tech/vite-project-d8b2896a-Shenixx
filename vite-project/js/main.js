@@ -16,7 +16,6 @@ function getData() {
         sentinels: sentinels,
     }
 }
-
 const data = getData();
 
 function makeCardD(duelists) {
@@ -38,5 +37,3 @@ function makeCardS(sentinels) {
     data.sentinels.forEach((sentinel) => DOMSelectors.box.insertAdjacentHTML("afterBegin", 
     `<div class="card"> <h2 class = "">${sentinel.name} </h2> <h3 class = "">${sentinel.description}</h3> </div>`));
 };
-
-makeCardC(data);
