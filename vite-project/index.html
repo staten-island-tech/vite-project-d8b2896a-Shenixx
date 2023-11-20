@@ -11,12 +11,23 @@
 <body>
     <section>
         <h1 class = head1>Valorant Agent Selector</h1>
-        <button type="button" id="btn">Duelist</button>
-        <button type="button" id="btn">Controller</button>
-        <button type="button" id="btn">Initiator</button>
-        <button type="button" id="btn">Sentinel</button>
-        <button type="button" id="btn">All</button>
+
+        <div id="container-box">
+            <p id="text">Select Role</p>
+            <div>
+                <input type="checkbox" id="duelist" name="duelist" value="Duelist">
+                <label for="vehicle1">Duelist</label><br>
+                <input type="checkbox" id="initiator" name="initiator" value="Initiator">
+                <label for="vehicle2">Initiator</label><br>
+                <input type="checkbox" id="controller" name="controller" value="Controller">
+                <label for="vehicle1">Controller</label><br>
+                <input type="checkbox" id="sentinel" name="sentinel" value="Sentinel">
+                <label for="vehicle2">Sentinel</label><br>
+
+                <button type="button" id="btn">Confirm</button>
+            </div>
     </section>
+
     <section>
         <div class="container" id="app"></div>
     </section>
