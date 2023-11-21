@@ -18,27 +18,23 @@ function getData() {
 }
 const data = getData();
 
-function makeCardD(duelists) {
-    data.duelists.forEach((duelist) => DOMSelectors.box.insertAdjacentHTML("afterBegin", 
-    `<div class="card"> <h2 class = "">${duelist.name} </h2> <h3 class = "">${duelist.description}</h3> </div> `));
+function makeCard(array) {
+    array.forEach((el) => DOMSelectors.box.insertAdjacentHTML("afterBegin", 
+    `<div class="card"> <h2 class = "">${el.name} </h2> <h3 class = "">${el.description}</h3> <img class="image" src="${el.image}"</div> `));
 };
 
-function makeCardC(controllers) {
-    data.controllers.forEach((controller) => DOMSelectors.box.insertAdjacentHTML("afterBegin", 
-    `<div class="card"> <h2 class = "">${controller.name} </h2> <h3 class = "">${controller.description}</h3> </div>`));
-};
-
-function makeCardI(initiators) {
-    data.initiators.forEach((initiator) => DOMSelectors.box.insertAdjacentHTML("afterBegin", 
-    `<div class="card"> <h2 class = "">${initiator.name} </h2> <h3 class = "">${initiator.description}</h3> </div>`));
-};
-
-function makeCardS(sentinels) {
-    data.sentinels.forEach((sentinel) => DOMSelectors.box.insertAdjacentHTML("afterBegin", 
-    `<div class="card"> <h2 class = "">${sentinel.name} </h2> <h3 class = "">${sentinel.description}</h3> </div>`));
-};
-
-// button.addEventListener() {
-
-// }
-
+DOMSelectors.button.addEventListener("click", function() {
+    if (duelist.checked){
+        makeCard(data.duelists);    
+    }
+    if (controller.checked){
+        makeCard(data.controllers);    
+    }
+    if (initiator.checked){
+        makeCard(data.initiators);    
+    }
+    if (sentinel.checked){
+        makeCard(data.sentinels);    
+    }
+    
+});

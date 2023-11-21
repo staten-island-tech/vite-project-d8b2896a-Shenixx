@@ -25,9 +25,9 @@ body {
 .container {
   display: flex;
   justify-content: space-around;
-  padding: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
-
 }
 
 .head {
@@ -60,4 +60,9 @@ body {
   color: rgb(0, 0, 0);
   border: 3px solid rgb(0, 0, 0);
   background-color: #ffffffaf;
+}
+
+.image{
+  width: 50%;
+  height: 5%; 
 }
