@@ -20,21 +20,30 @@ const data = getData();
 
 function makeCard(array) {
     array.forEach((el) => DOMSelectors.box.insertAdjacentHTML("afterBegin", 
-    `<div class="card"> <h2 class = "">${el.name} </h2> <h3 class = "">${el.description}</h3> <img class="image" src="${el.image}"</div> `));
+    `<div class="card"> <h2 class = "">${el.name} </h2> <h3 class = "">${el.role} </h3> <h3 class = "">${el.description}</h3> <img class="image" src="${el.image}"</div> `));
 };
 
+function normalPage(){
+    makeCard(data.sentinels); 
+    makeCard(data.initiators);
+    makeCard(data.controllers); 
+    makeCard(data.duelists);
+}
+
 DOMSelectors.button.addEventListener("click", function() {
-    if (duelist.checked){
-        makeCard(data.duelists);    
-    }
-    if (controller.checked){
-        makeCard(data.controllers);    
+    DOMSelectors.box.innerHTML = "";
+    if (sentinel.checked){
+        makeCard(data.sentinels);    
     }
     if (initiator.checked){
         makeCard(data.initiators);    
     }
-    if (sentinel.checked){
-        makeCard(data.sentinels);    
+    if (controller.checked){
+        makeCard(data.controllers);    
     }
-    
+    if (duelist.checked){
+        makeCard(data.duelists);    
+    }
 });
+
+normalPage();
