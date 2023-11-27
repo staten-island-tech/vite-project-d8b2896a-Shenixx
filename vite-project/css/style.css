@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Mukta:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-
 body {
   background-color: rgb(0, 217, 255)
 }
@@ -29,7 +28,6 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-
 
 .image{ 
   width: 12vw;
