@@ -119,19 +119,6 @@ const agents = [
         description: "A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.",
         image:"https://i.imgur.com/FUKpAru.png",
     },
-    {
-        name: "",
-        role: "",
-        description: "",
-        image:"",
-    },
-    {
-        name: "",
-        role: "",
-        description: "",
-        image:"",
-    },
-    
 ]
 
 export {agents};
