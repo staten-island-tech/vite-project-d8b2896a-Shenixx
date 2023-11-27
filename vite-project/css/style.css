@@ -30,37 +30,6 @@ body {
   margin: 0 auto;
 }
 
-.head {
-  font-family: Caveat;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 75%;
-  height: 8%;
-  text-align: center;
-  margin: 1% auto;
-  font-size: 350%;
-  color: rgb(255, 255, 255);
-  border: 3px solid rgba(177, 0, 0, 0.503);
-  background-color: #00000098;
-}
-
-.h2{
-  font-family: Caveat;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height: 8%;
-  text-align: center;
-  margin: auto;
-  margin-top: 50px;
-  font-size: 320%;
-  color: rgb(0, 0, 0);
-  border: 3px solid rgb(0, 0, 0);
-  background-color: #ffffffaf;
-}
 
 .image{ 
   width: 12vw;
