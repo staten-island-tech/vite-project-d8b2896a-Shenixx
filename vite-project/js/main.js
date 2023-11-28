@@ -4,24 +4,22 @@ import './dom'
 import { agents } from "./agents";
 import { DOMSelectors } from "./dom";
 
+function insert(arr){
+    arr.forEach((el)=>DOMSelectors.box.insertAdjacentHTML("afterBegin",
+    `<div class="card"> <h2 class = "">${el.name} </h2> <h3 class = "">${el.role} </h3> <h3 class = "">${el.description}</h3> <img class="image" src="${el.image}"</div> `
+    ));
+    
+    function filter(){
+    let buttons = DOMSelectors.button
+    
+    buttons.forEach((agent)=>agent.addEventListener("click", function(){
+        let role = agent.textContent
+        let filter = agents.filter((agent)=>agent.role===role)
+            insert(filter)
+        }));
+    }}
 
-
-// function filter(){
-//     let buttons = DOMSelectors.button
-//     buttons.forEach((i)=>i.addEventListener("click", function(){
-//         let afflatus = i.textContent
-//         document.querySelector(".flexbox").innerHTML = ""
-//         if (afflatus === "All") {
-//             insert(array)
-//         }
-//         else{
-//             let filter = array.filter((j)=>j.afflatus===afflatus)
-//             insert(filter)
-//         }
-
-//     }))
-// }
-
+insert(agents);
 
 // function getData() {
 //     const duelists = agents.filter((agent) => agent.role === "Duelist")
