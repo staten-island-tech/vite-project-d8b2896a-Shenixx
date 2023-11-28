@@ -8,6 +8,7 @@
   --gray: rgb(74, 74, 74);
   --red: rgb(255, 0, 0);
   --blue: rgb(0, 0, 255);
+  --whiteishmaybe: rgb(197, 197, 197);
   --img1: url(https://cdna.artstation.com/p/assets/images/images/025/669/906/large/dino-rhinosaur-done-wp-pink-with-pic.jpg?1586544608);
   --img2: url(https://pbs.twimg.com/media/EZdgO14WoAINDOG.jpg:large);
 }
@@ -16,14 +17,16 @@
   --image: var(--img2);
   --primary: var(--white);
   --seconary: var(--black);
-  --third: var(--blue)
+  --third: var(--blue);
+  --theme: var(--whiteishmaybe);
 }
 
 .dark-theme {
   --image: var(--img1);
   --primary: var(--black);
   --seconary: var(--white);
-  --third: var(--red)
+  --third: var(--red);
+  --theme: var(--gray);
 }
 
 body {
@@ -55,12 +58,12 @@ body {
   margin: 0 auto;
 }
 
-.image{ 
+.image {
   width: 12vw;
   height: 40vh;
 }
 
-#btn, #themeSwitcher{
+#btn {
   display: flex;
   width: 19%;
   padding: 2vh;
@@ -71,7 +74,18 @@ body {
   border: 1px solid var(--third);
 }
 
-#buttons{
+#themeSwitcher {
+  display: flex;
+  width: 19%;
+  margin: 1% auto;
+  align-items: center;
+  color: var(--seconary);
+  background-color: var(--theme);
+  border: 1px solid var(--primary);
+}
+
+
+#buttons {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -93,7 +107,7 @@ body {
   background-color: var(--primary);
 }
 
-#text{
+#text {
   font-family: Caveat;
   display: flex;
   flex-direction: row;
