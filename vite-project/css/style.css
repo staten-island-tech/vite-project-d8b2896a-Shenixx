@@ -3,23 +3,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 :root {
-  --black: black;
-  --white: white;
+  --black: rgb(0, 0, 0);
+  --white: rgb(223, 223, 223);
+  --gray: rgb(74, 74, 74);
+  --red: rgb(255, 0, 0);
+  --blue: rgb(0, 0, 255);
+  --img1: url(https://cdna.artstation.com/p/assets/images/images/025/669/906/large/dino-rhinosaur-done-wp-pink-with-pic.jpg?1586544608);
+  --img2: url(https://pbs.twimg.com/media/EZdgO14WoAINDOG.jpg:large);
 }
 
 .light-theme {
+  --image: var(--img2);
   --primary: var(--white);
-  --seconary:
+  --seconary: var(--black);
+  --third: var(--blue)
 }
 
 .dark-theme {
+  --image: var(--img1);
   --primary: var(--black);
-  --seconary:
-
+  --seconary: var(--white);
+  --third: var(--red)
 }
 
 body {
-  background-color: var(--primary);
+  background-image: var(--image);
+  background-attachment: fixed;
 }
 
 .card {
@@ -30,8 +39,9 @@ body {
   padding: 1rem;
   width: 26%;
   height: 35%;
-  background-color: rgba(0, 0, 0, 0.69);
-  border: 1px solid rgb(255, 0, 0);
+  color: var(--seconary);
+  background-color: var(--primary);
+  border: 1px solid var(--third);
   margin: 1.5% auto;
   justify-content: space-around;
   padding: 0 auto;
