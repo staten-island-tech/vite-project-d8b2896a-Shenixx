@@ -5,7 +5,9 @@
 :root {
   --black: rgb(0, 0, 0);
   --white: rgb(223, 223, 223);
-  --gray: rgb(74, 74, 74);
+  --white2:rgba(223, 223, 223, 0.829);
+  --gray: rgb(36, 36, 36);
+  --gray2: rgba(5, 5, 5, 0.795);
   --red: rgb(255, 0, 0);
   --blue: rgb(0, 0, 255);
   --whiteishmaybe: rgb(197, 197, 197);
@@ -16,6 +18,7 @@
 .light-theme {
   --image: var(--img2);
   --primary: var(--white);
+  --primary1: var(--white2);
   --seconary: var(--black);
   --third: var(--blue);
   --theme: var(--whiteishmaybe);
@@ -24,6 +27,7 @@
 .dark-theme {
   --image: var(--img1);
   --primary: var(--black);
+  --primary1: var(--gray2);
   --seconary: var(--white);
   --third: var(--red);
   --theme: var(--gray);
@@ -43,7 +47,7 @@ body {
   width: 26%;
   height: 35%;
   color: var(--seconary);
-  background-color: var(--primary);
+  background-color: var(--primary1);
   border: 1px solid var(--third);
   margin: 1.5% auto;
   justify-content: space-around;
