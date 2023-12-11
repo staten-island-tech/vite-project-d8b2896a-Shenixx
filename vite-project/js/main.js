@@ -6,7 +6,8 @@ import { DOMSelectors } from "./dom";
 
 function insert(arr){
     arr.forEach((el)=>DOMSelectors.box.insertAdjacentHTML("afterBegin",
-    `<div class="card"> <h2 class = "">${el.name} </h2> <h3 class = "">${el.role} </h3> <h3 class = "">${el.description}</h3> <img class="image" src="${el.image}"</div> `
+    `<div class="card"> <h2 class = "">${el.name} </h2> <h3 class = "">${el.role} </h3> <h3 class = "">${el.description}</h3> 
+    <img class="image" src="${el.image}"</div> `
     ));
     }
 
